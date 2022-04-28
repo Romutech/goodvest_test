@@ -18,7 +18,6 @@ from django.db import models
 # attached to one user.
 
 # - fr -
-# Portfolio:
 # Le modèle doit posséder deux attributs :
 # - Un attribut qui est une relation avec le modèle User
 # - Un attribut "amount" qui aura le type "float" et initialisé à None par
@@ -49,9 +48,9 @@ from django.db import models
 # have several "Funds".
 
 # - fr -
-# Le modèle Fonds doit avoir 3 attributs
+# Le modèle "Fund" doit avoir 3 attributs
 # - Un attribut qui est une relation avec le modèle Portefeuille
-# - Un attribut "pourcentage" qui aura le type "float" et initialisé à None par
+# - Un attribut "percentage" qui aura le type "float" et initialisé à None par
 # défaut.
 # - Un attribut "date" représentant un champ "date" de type datetime.date en
 # Python

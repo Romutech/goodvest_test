@@ -1,3 +1,6 @@
+from django.urls import path
+from funds_management import views
+
 """The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
 Examples:
@@ -14,3 +17,6 @@ Including another URLconf
 
 # TODO
 # Create your url here.
+urlpatterns = [
+    path('', views.example),
+]
