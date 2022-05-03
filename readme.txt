@@ -2,7 +2,7 @@
            Test Technique Python / Django / DRF
 
 Ce test a pour but d'évaluer tes connaissances de base du langage de programmation
-Python et de ses technos associées, ici, le framework Django et DRF.
+Python et de ses technos associées, ici, le framework Django et Django REST framework.
 
 Le test consiste à créer une application ou un utilisateur possèdera un
 portefeuille et verra à son portefeuille, des fonds financiers y êtres associés.
@@ -12,7 +12,7 @@ Tu dois:
 - Generer les migrations
 - Créer les vues permettant d'interagir avec les modèles comme précisé plus bas
 - Créer le routing permettant de call les vues en questions
-- Créer les onctionnalités demandées plus bas
+- Créer les fonctionnalités demandées plus bas
 
 
 #################### FONCTIONNALITÉS DEMANDÉES ####################
@@ -61,10 +61,11 @@ Tu dois:
                    └──────────────┘
 
 
- Nous souhaitons un CRUD permettant d'interagir avec Portfolio avec les
- endpoints suivants :
+ Nous souhaitons interagir avec Portfolio, avec au minimum, les
+ fonctionnalités suivantes :
 
- - Créer un portefeuille associé à un user:
+ - Créer un portefeuille associé à un user.
+ Exemple de endpoint :
  [POST] http://127.0.0.1:8000/funds_management/portfolio/
  Exemple de Body :
  {
@@ -72,20 +73,16 @@ Tu dois:
     "amount": "42000",
  }
 
-  - Supprimer un portefeuille associé à un user:
-    ( ATENTION ! LA SUPPRESSION D'UN PORTEFEUILLE NE DOIT PAS SUPPRIMER LES FONDS
-    ASSOCIÉS )
- [POST] http://127.0.0.1:8000/funds_management/portfolio/
- Exemple de Body :
- {
-    "user_id": "42",
-    "amount": "42000",
- }
+  - Supprimer un portefeuille associé à un user.
+ Exemple de endpoint :
+ [DELETE] http://127.0.0.1:8000/funds_management/portfolio/{id}/
+
 
  Nous souhaitons un CRUD permettant d'interagir avec "Fund" avec
- les endpoints suivants :
+ les fonctionnalités suivantes :
 
- - Créer un fonds associé à un portefeuille:
+ - Créer un fonds associé à un portefeuille.
+ Exemple de endpoint :
  [POST] http://127.0.0.1:8000/funds_management/funds/
  Exemple de Body :
  {
@@ -94,25 +91,31 @@ Tu dois:
     "date": "2022-05-01"
  }
 
- - Modifier un fonds associé à un portefeuille:
+ - Modifier un fonds associé à un portefeuille.
+ Exemple de endpoint :
  [PATCH] http://127.0.0.1:8000/funds_management/funds/{id}/
  Exemple de Body :
  {
     "percentage": "0.42",
  }
 
- - Lister tous les fonds:
+ - Lister tous les fonds.
+ Exemple de endpoint :
  [GET] http://127.0.0.1:8000/funds_management/funds/
 
- - Lister un fonds en question
+ - Lister un fonds en question.
+ Exemple de endpoint :
  [GET] http://127.0.0.1:8000/funds_management/funds/{id}/
 
- - Supprimer un fonds en question
+ - Supprimer un fonds en question.
+ Exemple de endpoint :
  [DELETE] http://127.0.0.1:8000/funds_management/funds/{id}/
 
- - Lister les fonds avec une fourchette de date envoyée dans le body - en format de
+ - Lister les fonds avec une fourchette de date envoyée dans le body - au format de
  dates françaises - avec une date de départ et une date de fin incluses.
+ Exemple de endpoint :
  [GET] http://127.0.0.1:8000/funds_management/funds/date_range
+ Exemple de body :
  {
     "start_date": "11/03/2021",
     "end_date": "10/06/2022",
@@ -120,12 +123,13 @@ Tu dois:
 
   Une fois le projet terminé, tu devras versionner le projet sur Github avec un Repo privé
   auquel tu nous donnera accès.
+  Mon Profil GitHub est "Romutech".
 
 
 Pour tester le fonctionnement du projet de ton côté, tu peux:
- - Créer un environnement virtuel et installer des dépendances renseignés dans
+ - Créer un environnement virtuel et installer les dépendances renseignées dans
 requirements.txt
  - Jouer les migrations
- - lancer le serveur de développement
+ - lancer le serveur de développement.
 
  Good Luck! ^^

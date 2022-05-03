@@ -1,3 +1,6 @@
+from datetime import datetime
+
+from django.contrib.auth.models import User
 from django.db import models
 
 
@@ -8,16 +11,6 @@ from django.db import models
 # | |  | (_) | |  | |_| || (_) | | | (_) |   | | | | | | (_) | (_| |  __/ |
 # |_|   \___/|_|   \__|_| \___/|_|_|\___/    |_| |_| |_|\___/ \__,_|\___|_|
 
-# - en -
-# The Portfolio model must have two attributes:
-# - An attribute that is a relationship with the model User
-# - An attribute "amount" which will have the type "float" and initialized to
-# None by default
-
-# Info: a user can only have one portfolio and a portfolio can only be
-# attached to one user.
-
-# - fr -
 # Le modèle doit posséder deux attributs :
 # - Un attribut qui est une relation avec le modèle User
 # - Un attribut "amount" qui aura le type "float" et initialisé à None par
@@ -36,18 +29,7 @@ from django.db import models
 # | |  | |_| | | | | (_| |  | | | | | | (_) | (_| |  __/ |
 # |_|   \__,_|_| |_|\__,_|  |_| |_| |_|\___/ \__,_|\___|_|
 
-# - en -
-# The Fund model must have 3 attributes
-# - An attribute that is a relationship with the Portfolio model
-# - A "percentage" attribute which will have the type "float" and initialized
-# to None by default.
-# - A "date" attribute representing a "date" field of type datetime.date in
-# Python
 
-# Info: a "Fund" can be attached to several "Portfolio" and a "Portfolio" can
-# have several "Funds".
-
-# - fr -
 # Le modèle "Fund" doit avoir 3 attributs
 # - Un attribut qui est une relation avec le modèle Portefeuille
 # - Un attribut "percentage" qui aura le type "float" et initialisé à None par
