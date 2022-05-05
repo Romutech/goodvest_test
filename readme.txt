@@ -4,7 +4,7 @@
 Ce test a pour but d'évaluer tes connaissances de base du langage de programmation
 Python et de ses technos associées, ici, le framework Django et Django REST framework.
 
-Le test consiste à créer une application ou un utilisateur possèdera un
+Le test consiste à créer une API REST ou un utilisateur possèdera un
 portefeuille et verra à son portefeuille, des fonds financiers y êtres associés.
 
 Tu dois:
