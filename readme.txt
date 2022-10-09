@@ -133,3 +133,5 @@ requirements.txt
  - lancer le serveur de développement.
 
  Good Luck! ^^
+ 
+ Robin Muller
